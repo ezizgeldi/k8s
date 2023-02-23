@@ -5,5 +5,12 @@ metadata:
 spec:
   containers:
     - name: container-apache
-      image: apache:latest 
+      image: httpd:2.4
+      ports:
+        - containerPort: 80
+
+    - name: container-api
+      image: tomcat:latest
+      ports:
+        - containerPort: 8080
   
